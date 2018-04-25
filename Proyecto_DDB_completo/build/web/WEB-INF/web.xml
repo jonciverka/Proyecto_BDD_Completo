@@ -20,6 +20,10 @@
         <servlet-name>Actualizar</servlet-name>
         <servlet-class>paquete.Actualizar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Reproducciones</servlet-name>
+        <servlet-class>paquete.Reproducciones</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registro</servlet-name>
         <url-pattern>/Registro</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>Actualizar</servlet-name>
         <url-pattern>/Actualizar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Reproducciones</servlet-name>
+        <url-pattern>/Reproducciones</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
