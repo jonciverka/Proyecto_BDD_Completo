@@ -8,10 +8,12 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="./css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="./js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/bootstrap.min.css"  >        
+	 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js" ></script>
+        <script src="./js/bootbox.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
     </head>
     <body>
@@ -62,8 +64,8 @@
                         </li>
 
                     </ul>
-                    <H1><b><center class="color-blanco margen">Canciones</center></b> </H1>	
-                    <div class="row">
+                    <H1><b><center class="color-blanco margen">Canciones</center></b> </H1>                    
+                     <div class="row">
                         <div class="col-md-12">
                             <ul id="playlist" class="list-group list-group-flush tranaparente">
                                 <%
@@ -72,7 +74,7 @@
 
                                     for (int i = 0; i < canciones.size(); i++) {
                                         out.println("<li class=\"list-group-item tranaparente \">\n"
-                                                + "     <a href=\"Canciones/" + canciones.get(i).getIdCancion() + ".mp3\"><span class=\"text-color-gris\" onclick='inc(" + canciones.get(i).getIdCancion() + ")'>" + canciones.get(i).getNombre() + "</span></a>\n"
+                                                + "     <a href=\"Canciones/" + canciones.get(i).getIdCancion() + ".mp3\"><span class=\"text-color-gris confirm \" onclick='inc(" + canciones.get(i).getIdCancion() + ")'>" + canciones.get(i).getNombre() + "</span></a>\n"
                                                 + "     <a class=\"btn btn-success float-right  \" data-toggle=\"collapse\" href=\"#collapseExample" + i + "\" role=\"button\" aria-expanded\false\" aria-controls=\"collapseExample\">\n"
                                                 + "         Agregar a Lista.\n"
                                                 + "       </a>  \n"
@@ -114,11 +116,29 @@
                                     $.get("Reproducciones?id=" + id, function (data, status) {
                                         //alert("Data: " + data + "\nStatus: " + status);
                                         if(data==='1'){
-                                            alert('ganaste un premio');
+                                                bootbox.confirm({
+                                                message: "Felicidades!!! Has ganado un premio de parte de Spotiti. ¿Desea Reclamarlo?",
+                                                buttons: {
+                                                    confirm: {
+                                                        label: 'Si',
+                                                        className: 'btn-success'
+                                                    },
+                                                    cancel: {
+                                                        label: 'No',
+                                                        className: 'btn-danger'
+                                                    }
+                                                },
+                                                callback: function (result) {
+                                                    console.log('This was logged in the callback: ' + result);
+                                                }
+                                            });
                                         }
                                     });
                                     
+                                    
                                 }
+                               
+                       
                             </script>
                         </div>
                     </div>		
