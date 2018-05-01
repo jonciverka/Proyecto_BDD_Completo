@@ -9,7 +9,7 @@
     <head>
         <title></title>
         <link rel="stylesheet" href="./css/bootstrap.min.css"  >        
-	 
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js" ></script>
@@ -65,7 +65,7 @@
 
                     </ul>
                     <H1><b><center class="color-blanco margen">Canciones</center></b> </H1>                    
-                     <div class="row">
+                    <div class="row">
                         <div class="col-md-12">
                             <ul id="playlist" class="list-group list-group-flush tranaparente">
                                 <%
@@ -115,8 +115,8 @@
                                 function inc(id) {
                                     $.get("Reproducciones?id=" + id, function (data, status) {
                                         //alert("Data: " + data + "\nStatus: " + status);
-                                        if(data==='1'){
-                                                bootbox.confirm({
+                                        if (data === '1') {
+                                            bootbox.confirm({
                                                 message: "Felicidades!!! Has ganado un premio de parte de Spotiti. ¿Desea Reclamarlo?",
                                                 buttons: {
                                                     confirm: {
@@ -134,15 +134,14 @@
                                             });
                                         }
                                     });
-                                    
-                                    
+
+
                                 }
-                               
-                       
+
+
                             </script>
                         </div>
                     </div>		
-
                 </div>
             </div>
             <FOOTER>

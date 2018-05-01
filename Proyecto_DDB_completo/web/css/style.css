@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/05/2017, 07:31:20 PM
+    Author     : OmarNori
+*/
+@font-face{
+    font-family: "SOU";
+    src: url("../Fuentes/SOUCISAN.ttf");
+}
+@font-face{
+    font-family: "BB";
+    src: url("../Fuentes/Bellota-Bold.otf");
+}
+@font-face{
+    font-family: "MP";
+    src: url("../Fuentes/MotionPicture_PersonalUseOnly.ttf");
+}
+*{
+    margin:0;
+}
+
+html, body{
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin-bottom: 20px;
+}
+
+nav {/*Definimos una barra de navegación*/
+    position: fixed;
+    width: 100%;/*Ancho de  la barra de navegación*/
+    height: 10%;/*Alto de la barra de navegación*/
+    background-color: rgba(0,0,0,.5);/*Color de la  barra de navegación*/
+    z-index: 99;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: white;/*Color de las letras de la barra*/
+    margin-left: 30px;
+    line-height: 50px;
+
+}
+
+
+
+.sect{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.subSection{
+    height: 50%;
+    background-color: white;/*Color de la barra que desliza*/
+
+}
+
+.sectOne{
+    background-image: url("imagen/toy1.jpg");
+}
+
+.sectTwo{
+    background-image: url("imagen/toy2.1.jpg");
+}
+
+.sectThree{
+    background-image: url("imagen/toy1.1.jpg");
+}
+
+.divmenu{
+    padding: 0cm 1cm 1cm 0cm;
+}
+.divj{
+    font-family: "BB";
+    position: fixed;
+    height: 50%;
+    width: 20%;
+    margin-top: .5%;
+    margin-left: .5%;
+    background-color:  rgba(255,255,255,.7);
+    font-family: ""
+}
+
+.divusers{
+    position: fixed;
+    height: 80%;
+    width: 95%;
+    margin-top: 3%;
+    margin-left: 3%;
+    background-color:  rgba(255,255,255,.7);
+}
