@@ -132,7 +132,7 @@
                                                     if(result){
                                                         window.location.href ="./juguetes.jsp";
                                                     }else{
-                                                        console.log(falso);
+                                                        console.log("falso");
                                                     }
                                                 }
                                             });
