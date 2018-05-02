@@ -42,7 +42,7 @@ public class Disminuir extends HttpServlet {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, juguete);
             ps.execute();
-            response.sendRedirect("index.html");
+            response.sendRedirect("canciones.jsp");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

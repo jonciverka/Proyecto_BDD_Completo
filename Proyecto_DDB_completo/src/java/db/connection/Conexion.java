@@ -16,7 +16,7 @@ public class Conexion {
         this.bd = bd;
     }
     public Conexion() {
-        this(null, "root", "n0m3l0", "jdbc:mysql://localhost/", null);
+        this(null, "root", "n0m3l0", "jdbc:mysql://localhost/", null); //ipmusica
     }
     public Connection getConect() {
         return conect;

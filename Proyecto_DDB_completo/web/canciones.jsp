@@ -129,7 +129,11 @@
                                                     }
                                                 },
                                                 callback: function (result) {
-                                                    console.log('This was logged in the callback: ' + result);
+                                                    if(result){
+                                                        window.location.href ="./juguetes.jsp";
+                                                    }else{
+                                                        console.log(falso);
+                                                    }
                                                 }
                                             });
                                         }
